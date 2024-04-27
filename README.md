@@ -1,9 +1,6 @@
 # Building-An-Organization-VPN-Network
 ## Objective
-[Brief Objective - Remove this afterwards]
-
-The Detection Lab project aimed to establish a controlled environment for simulating and detecting cyber attacks. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
-
+Design and implement a virtual VPN network infrastructure on Packet Tracer to securely connect multiple remote locations and facilitate seamless communication between them while ensuring confidentiality, integrity, and availability of data transmission, and at the same time gaining indepth understanding of basic network protocols.
 ### Skills Learned
 - Advanced comprehension of IP addressing, routing protocols, switching mechanisms, and VLAN configuration.
 - Advanced understanding of basic network configuration. 
