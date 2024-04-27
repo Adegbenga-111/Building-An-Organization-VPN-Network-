@@ -11,7 +11,7 @@ Design and implement a virtual VPN network infrastructure on Packet Tracer to se
 - Packet Tracer.
 - Google (for research) .
 ## Steps
-Step 1 Network Design
+**Step 1 Network Design :**
 This network design framework offers a systematic approach to architecting, addressing, routing, and securing the organization's network, guaranteeing a resilient and adaptable infrastructure that can be expanded to meet future growth.
 The network design diagram helps to give a clear idea of what the network infrastructure should look, and which the network device is connected to which device. since this project was a simulation, only few network devices were used , as shown in the image below
 
