@@ -29,17 +29,17 @@ Router 192.168.1.1 Configuration:
 -  Router(config-if)#ip add 192.168.1.1 255.255.255.0 
 -  Router(config-if)#no shut
 
- **This lines of command is to configure fast/ethernet0/0 , as shown in the image below.**
- ![Alt Network Diagram ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_59%20PM.png)
-
+ **This lines of command is to configure fast/ethernet0/0 for 192.168.1.1, as shown in the image below.**
+ ![Alt fast/ethernet0/0 for 192.168.1.1 ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_59%20PM.png)
+*image 2: fast/ethernet0/0 for 192.168.1.1 *
 -   Router(config-if)#exit
 -   Router(config)#int fa0/1
 -   Router(config-if)#ip address 13.2.5.3 255.0.0.0
 -   Router(config-if)#no shut
 
-  **This lines of command is to configure fast/ethernet0/1 , as shown in the image below.**
-   ![Alt Network Diagram ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_53%20PM.png)
-
+  **This lines of command is to configure fast/ethernet0/1 for 192.168.1.1 , as shown in the image below.**
+   ![Alt fast/ethernet0/1 for 192.168.1.1 ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_53%20PM.png)
+*image 3: fast/ethernet0/1 for 192.168.1.1 *
 Router ISP Configuration:
 -Router>enable
 -Router#config t
@@ -47,8 +47,17 @@ Router ISP Configuration:
 **This lines of command is to move from User Exec mode to Global Configuration mode(All configuration are done in this mode) .**
 
 - Router(config)#int fa0/0
-- Router (config-if)#ip add 1.0.0.2 255.0.0.0
+- Router (config-if)#ip add 12.2.5.3 255.0.0.0
 - Router(config-if)#no shut
 - Router(config-if)#exit
 
  **This lines of command is to configure fast/ethernet0/0 for ISP , as shown in the image below.**
+![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/ISP%20(13.2.5.7)%20(12.2.5.3)%204_27_2024%203_53_22%20PM.png)
+*image 4: fast/ethernet0/0 for ISP*
+- Router(config)#int fa0/1
+- Router(config-if)#ip add 2.0.0.1 255.0.0.0
+- Router(config-if)#no shut
+
+ **This lines of command is to configure fast/ethernet0/1 for ISP , as shown in the image below.**
+ ![Alt  configure fast/ethernet0/1 for ISP ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/ISP%20(13.2.5.7)%20(12.2.5.3)%204_27_2024%203_53_29%20PM.png)
+*image 5: fast/ethernet0/1 for ISP*
