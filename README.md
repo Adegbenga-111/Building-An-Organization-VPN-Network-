@@ -99,4 +99,35 @@ Router 10.0.1.1 Configuration:
 - Enter configuration commands, one per line. End with CNTL/Z.
 - Router(config)#ip route 0.0.0.0 0.0.0.0 12.2.5.3
 - Router(config)#
-  
+
+## Step 3 VPN Configuration :
+NOW CREATE VPN TUNNEL between  192.168.1.1 and 10.0.1.1:
+
+ Fisrt Create A VPN Tunnel On ROUTER 192.168.1.1:
+- Router#config t
+- Router(config)#interface tunnel 10
+- Router(config-if)#ip address 172.16.1.1 255.255.0.0
+- Router(config-if)#tunnel source fa0/1
+- Router(config-if)#tunnel destination 12.2.5.4
+- Routerconfig-if)#no shut
+
+NOW CREATE A VPN TUNNEL ON ROUTER 10.0.1.1:
+- Router#config t
+- Router(config)#interface tunnel 100
+- Router(config-if)#ip address 172.16.1.2 255.255.0.0
+- Router(config-if)#tunnel source fa0/0
+- Router(config-if)#tunnel destination 13.2.5.3
+- Router(config-if)#no shut
+
+Now Do routing for created VPN Tunnel on Both Router 192.168.1.1 and 10.0.1.1:
+
+ For Router 192.168.1.1:
+  - Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.2
+ 
+  For Router 10.0.1.1:
+  - Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
+ 
+## Step 3 END POINT DEVICES Configuration :
+For the configuration of end point devices , just double click on the devcie and a plane will show up and move to config, then configuration was done as shown in the images shown below
+![Alt Configuration for pc on 192.168.1.10  ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.10%204_27_2024%203_51_06%20PM.png)
+*image 8:Configuration for pc on 192.168.1.10 *
