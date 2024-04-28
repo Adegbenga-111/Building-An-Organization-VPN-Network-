@@ -55,9 +55,48 @@ Router ISP Configuration:
 ![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/ISP%20(13.2.5.7)%20(12.2.5.3)%204_27_2024%203_53_22%20PM.png)
 *image 4: fast/ethernet0/0 for ISP*
 - Router(config)#int fa0/1
-- Router(config-if)#ip add 2.0.0.1 255.0.0.0
+- Router(config-if)#ip add 13.2.5.7 255.0.0.0
 - Router(config-if)#no shut
 
  **This lines of command is to configure fast/ethernet0/1 for ISP , as shown in the image below.**
  ![Alt  configure fast/ethernet0/1 for ISP ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/ISP%20(13.2.5.7)%20(12.2.5.3)%204_27_2024%203_53_29%20PM.png)
 *image 5: fast/ethernet0/1 for ISP*
+
+Router 10.0.1.1 Configuration:
+- Router>enable
+- Router#config t
+
+**This lines of command is to move from User Exec mode to Global Configuration mode(All configuration are done in this mode) .**
+
+- Router(config)#int fa0/0
+- Router(config-if)#ip add 12.2.5.4 255.0.0.0
+- Router config-if)#no shut
+
+**This lines of command is to configure fast/ethernet0/0 for 10.0.1.1 , as shown in the image below.**
+![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/10.0.1.1%204_27_2024%203_53_58%20PM.png)
+*image 6: fast/ethernet0/0 for 10.0.1.1*
+
+- Router(config-if)#exit
+- Router(config)#int fa0/1
+- Router(config-if)#ip add 10.0.1.1 255.255.255.0
+- Router(config-if)#no shut
+
+  
+**This lines of command is to configure fast/ethernet0/1 for 10.0.1.1 , as shown in the image below.**
+![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/10.0.1.1%204_27_2024%203_54_09%20PM.png)
+*image 7: fast/ethernet0/0 for 10.0.1.1*
+
+**DEFAULT ROUTING CONFIGURATION ON ROUTER 192.168.1.1:.**
+- Router>enable
+- Router#config t
+- Enter configuration commands, one per line. End with CNTL/Z.
+- Router(config)#ip route 0.0.0.0 0.0.0.0 13.2.5.7
+- Router(config)#
+
+**DEFAULT ROUTING CONFIGURATION ON ROUTER 10.0.1.1:.**
+- Router>enable
+- Router#config t
+- Enter configuration commands, one per line. End with CNTL/Z.
+- Router(config)#ip route 0.0.0.0 0.0.0.0 12.2.5.3
+- Router(config)#
+  
