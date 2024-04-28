@@ -11,9 +11,26 @@ Design and implement a virtual VPN network infrastructure on Packet Tracer to se
 - Packet Tracer.
 - Google (for research) .
 ## Steps
-**Step 1 Network Design :**
+## Step 1 Network Design :
 This network design framework offers a systematic approach to architecting, addressing, routing, and securing the organization's network, guaranteeing a resilient and adaptable infrastructure that can be expanded to meet future growth.
 The network design diagram helps to give a clear idea of what the network infrastructure should look, and which the network device is connected to which device. since this project was a simulation, only few network devices were used , as shown in the image below
 
 ![Alt Network Diagram ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/to%20be%20used%20as%20the%20network%20diagram.png)
-*Ref 1: Network Diagram*
+*image 1: Network Diagram*
+## Step 2 Router Configuration :
+According to image 1 , there are three routers which are 192.168.1.1, ISP, 10.0.1.1. In order to create this network each of the router as to be configured using the cisco CLI(command line interface).
+192.168.1.1 Configuration:
+ - Router>enable
+ - Router#config t
+
+**This lines of command is to move from User Exec mode to Global Configuration mode(All configuration are done in this mode) .**
+
+-  r1(config)#int fa0/0
+-  r1(config-if)#ip add 192.168.1.1 255.255.255.0 
+-  r1(config-if)#no shut
+
+ **This lines of command is to configure fast/ethernet0/0 , as shown in the image below.**
+ ![Alt Network Diagram ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_59%20PM.png)
+
+- Enhanced knowledge of network protocols. 
+- Development of critical thinking and problem-solving skills in cybersecurity and networking.
