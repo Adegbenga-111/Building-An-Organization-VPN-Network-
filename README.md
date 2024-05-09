@@ -127,7 +127,7 @@ Now Do routing for created VPN Tunnel on Both Router 192.168.1.1 and 10.0.1.1:
   For Router 10.0.1.1:
   - Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
  
-## Step 3 END POINT DEVICES Configuration :
+## Step 4 END POINT DEVICES Configuration :
 For the configuration of end point devices , just double click on the devcie and a plane will show up and move to config, then configuration was done as shown in the images shown below
 ![Alt Configuration for pc on 192.168.1.10  ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.10%204_27_2024%203_51_06%20PM.png)
 *image 8:Configuration for pc on 192.168.1.10 *
@@ -140,7 +140,7 @@ For the configuration of end point devices , just double click on the devcie and
 
 That for 192.168.1.0/255 network , next is the 10.0.1.0/255 which are configured the same way .
 
-## Step 3 Testing of the network :
+## Step 5 Testing of the network :
 
 This is done to ensure that the network and end point devices are all communicating, the is done by using the command "ping" the ip address of the end point device. As shown below 
 
